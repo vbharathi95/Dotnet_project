@@ -25,12 +25,12 @@ jobs:
                 dotnet-version: '10.0.x'
             - name: Restore dependencies
               run: |
-                cd UrbanCompany
+                cd UrbanCompany/
                 dotnet restore
             - name: publish
               run: |
-                cd UrbanCompany
-                dotnet publish -c Release -o publish
+                cd UrbanCompany/
+                dotnet publish UrbanCompany.csproj -c Release -o publish
             - name: Deploy to Azure Web App
               uses: azure/webapps-deploy@v2
               with:
