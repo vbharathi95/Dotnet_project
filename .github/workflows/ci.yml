@@ -1,0 +1,23 @@
+name: .NET Build
+on:
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+        
+              uses: actions/checkout@v6
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v6
+              with:
+                dotnet-version: '10.0.x'
+            - name: Restore dependencies
+              run: |
+                cd UrbanCompany
+                dotnet restore
+            - name: Build
+              run: |
+                cd UrbanCompany
+                dotnet build --no-restore
+            
