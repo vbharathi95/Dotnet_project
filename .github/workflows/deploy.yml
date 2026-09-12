@@ -14,10 +14,10 @@ jobs:
             - name: Setup Terraform
               uses: hashicorp/setup-terraform@v3
             - name: Terraform Init
-              workdir: terraform
+              working-directory: terraform
               run: terraform init
             - name: Terraform apply
-              workdir: terraform
+              working-directory: terraform
               run: terraform apply --auto-approve
             - name: Setup .NET
               uses: actions/setup-dotnet@v6
