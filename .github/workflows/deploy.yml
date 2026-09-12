@@ -35,7 +35,7 @@ jobs:
               uses: azure/webapps-deploy@v2
               with:
                 app-name: ucwebapp123
-                package: publish
+                package: ./UrbanCompany/publish
 
                
             
