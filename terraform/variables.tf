@@ -4,7 +4,7 @@ variable "rg" {
 }
 variable "location" {
   type = string
-  default = "canandacentral"
+  default = "canadacentral"
 }
 variable "asp" {
   type = string
